@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>HOTEL BOGUS</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/index.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src='/js/index.js' type="module" defer></script>
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Montserrat", sans-serif
+    }
+
+    .w3-row-padding img {
+      margin-bottom: 12px
+    }
+
+    /* Set the width of the sidebar to 120px */
+    .w3-sidebar {
+      width: 120px;
+      background: #222;
+    }
+
+    /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+    #main {
+      margin-left: 120px
+    }
+
+    /* Remove margins from "page content" on small screens */
+    @media only screen and (max-width: 600px) {
+      #main {
+        margin-left: 0
+      }
+    }
+  </style>
+</head>
+
+<body class="w3-black">
+
+  <!-- Icon Bar (Sidebar - hidden on small screens) -->
+  <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+    <!-- Avatar image in top left corner -->
+    <img src="../css/pictures/hotellogo.jpg" style="width:100%">
+    <a href="#home" class="w3-bar-item w3-button w3-padding-large w3-black">
+      <i class="fa fa-home w3-xxlarge"></i>
+      <p>ACASĂ</p>
+    </a>
+    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+      <i class="fa fa-user w3-xxlarge"></i>
+      <p>DESCRIERE</p>
+    </a>
+    <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+      <i class="fa fa-eye w3-xxlarge"></i>
+      <p>GALERIE</p>
+    </a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+      <i class="fa fa-envelope w3-xxlarge"></i>
+      <p>CONTACT</p>
+    </a>
+  </nav>
+
+  <!-- Navbar on small screens (Hidden on medium and large screens) -->
+  <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+    <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+      <a href="#" class="w3-bar-item w3-button" style="width:25% !important">ACASĂ</a>
+      <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">DESCRIERE</a>
+      <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">GALERIE</a>
+      <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+    </div>
+  </div>
+
+  <!-- Page Content -->
+  <div class="container-sm" id="main">
+    <!-- Header/Home -->
+    <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+      <div class="row">
+        <h1 class="h1"> HOTEL BOGUS </h1>
+      </div>
+      <div class="row-sm">
+        <img src="../css/pictures/fourstars.jpg" class="img-fluid rounded" alt="boy" width="400" height="200">
+      </div>
+      <div class="row-sm">
+        <img src="../css/pictures/hotelbaloo.jpg" class="img-fluid rounded" alt="boy" width="900" height="600">
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+      <h2 class="w3-text-light-grey">Despre noi</h2>
+      <hr style="width:200px" class="w3-opacity">
+      <p>Situat la kilometrul zero al orașului, în inima centrului civic, Hotel BOGUS îți pune la dispoziție 80 de
+        camere noi, confortabile,
+        dotate cu absolut tot ceea ce ai nevoie pentru a te simți ca acasă sau chiar mai bine: Wi-Fi gratuit în întregul
+        hotel, Tv Smart LCD și aer condiționat
+        cu reglaj personalizat în fiecare cameră, băi moderne cu articole de toaletă gratuite, restaurant a-la-carte cu
+        specific mediteranean și internațional,
+        room-service, English Bar, parcare gratuită, recepție 24/24, 7/7.
+        <br>
+        Nu apelăm la superlative dar, astăzi, sigur putem conta pe câteva. Pentru ca odihna turistului este cea mai
+        importantă , Hotel Baloo n-a negociat
+        și n-a facut rabat când a fost vorba de mobiler și accesorii în camere. Aeroportul Kilisi se află la 70 km
+        distanță, iar cel din Riseno la 90 km.
+        <br>
+        Până la gara și autogara din Anada - Carolina sunt mai puțin de 2 km, iar la principalul obiectiv turistic al
+        orașului, vechea cetate druidă Galix,
+        ajungeți într-o plimbare de mai puțin de 10 minute. Pentru cei dornici sa descopere atracțiile Visilvaniei,
+        hotelul organizează în fiecare zi, cu autocare și microbuze
+        proprii, clasificate la 5 stele, tururi la cele mai importante obiective turistice din regiune: Salina Balix,
+        Munții Corintio, Cetatea Sinaius, Castelul lui Corcodel și
+        Castelul Strinilor.
+      </p>
+      <h3 class="w3-padding-16 w3-text-light-grey">Barometru turistic</h3>
+      <p class="w3-wide">Comfort</p>
+      <div class="w3-white">
+        <div class="w3-dark-grey" style="height:28px;width:95%"></div>
+      </div>
+      <p class="w3-wide">Amabilitate</p>
+      <div class="w3-white">
+        <div class="w3-dark-grey" style="height:28px;width:85%"></div>
+      </div>
+      <p class="w3-wide">Dotări</p>
+      <div class="w3-white">
+        <div class="w3-dark-grey" style="height:28px;width:80%"></div>
+      </div><br>
+
+      <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
+        <div class="w3-quarter w3-section">
+          <span class="w3-xlarge">14+</span><br>
+          Premii
+        </div>
+        <div class="w3-quarter w3-section">
+          <span class="w3-xlarge">300+</span><br>
+          Evenimente Corporate
+        </div>
+        <div class="w3-quarter w3-section">
+          <span class="w3-xlarge">3200+</span><br>
+          Clienți Fericiți
+        </div>
+        <div class="w3-quarter w3-section">
+          <span class="w3-xlarge">80</span><br>
+          Camere Disponibile
+        </div>
+      </div>
+      <button type="button" class="btn btn-success">
+        <a id="download-button" class="download" href="/x.pdf" download>Descarcă broșura</a>
+      </button>
+
+      <!-- Grid for pricing tables -->
+      <h3 class="w3-padding-16 w3-text-light-grey"></h3>
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-half w3-margin-bottom">
+          <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+            <li class="w3-dark-grey w3-xlarge w3-padding-32">Cameră Single </li>
+            <li class="w3-padding-16">Pat de o persoană</li>
+            <li class="w3-padding-16">Acces la piscină</li>
+            <li class="w3-padding-16">Smart TV, Wi-Fi, Minibar</li>
+            <li class="w3-padding-16">Mic-dejun inclus</li>
+            <li class="w3-padding-16">
+              <h2>$ 40</h2>
+              <span class="w3-opacity">pe zi</span>
+            </li>
+            <li class="w3-light-grey w3-padding-24">
+              <button class="w3-button w3-white w3-padding-large w3-hover-black" id="rezbutton1">Rezervă</button>
+              <div class="modal" id="modal1">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Rezervare Single Room</h5>
+                      <button type="button" class="btn-close" id="closebtn1" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form class="form1" id="form1" method="post">
+                          <label for="name">Name</label><br>
+                          <input type="text" class="name1" id="name1" name="name1" placeholder="Ex: Ionesc George"><br>
+                          <label for="email">Email address</label><br>
+                          <input type="email" class="email1" id="email1" name="email1" placeholder="Ex: anacalina@example.com"><br>
+                          <label for="phone">Phone Number</label><br>
+                          <input type="tel" class="phone1" id="phone1" name="phone1" placeholder="Ex: 07********"><br>
+                          <label for="start">Start date:</label><br>
+                          <input type="date" class="tripstart1" id="tripstart1" name="tripstart1" min="2023-01-01"
+                            max="2099-12-31"><br>
+                          <label for="start">END date:</label><br>
+                          <input type="date" class="tripend1" id="tripend1" name="tripend1" min="2023-01-01"
+                            max="2099-12-31"><br>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" id="send1">Trimite</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="w3-half">
+          <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+            <li class="w3-dark-grey w3-xlarge w3-padding-32">Cameră dublă</li>
+            <li class="w3-padding-16">Pat matrimonial</li>
+            <li class="w3-padding-16">Acces la piscină, Acces la saună</li>
+            <li class="w3-padding-16">Smart TV cu Netflix, Wi-Fi, Minibar</li>
+            <li class="w3-padding-16">Mic-dejun inclus</li>
+            <li class="w3-padding-16">
+              <h2>$ 80</h2>
+              <span class="w3-opacity">pe zi</span>
+            </li>
+            <li class="w3-light-grey w3-padding-24">
+              <button class="w3-button w3-white w3-padding-large w3-hover-black" id="rezbutton2">Rezervă</button>
+              <div class="modal" id="modal2">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Rezervare Double Room</h5>
+                      <button type="button" class="btn-close" id="closebtn2" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form class="form2" id="form2" method="post">
+                        <label for="name">Name</label><br>
+                        <input type="text" class="name2" id="name2" name="name2" placeholder="Ex: Ionesc George"><br>
+                        <label for="email">Email address</label><br>
+                        <input type="email" class="email2" id="email2" name="email2" placeholder="Ex: anacalina@example.com"><br>
+                        <label for="phone">Phone Number</label><br>
+                        <input type="tel" class="phone2" id="phone2" name="phone2" placeholder="Ex: 07********"><br>
+                        <label for="start">Start date:</label><br>
+                        <input type="date" class="tripstart2" id="tripstart2" name="tripstart2" min="2023-01-01"
+                          max="2099-12-31"><br>
+                        <label for="start">END date:</label><br>
+                        <input type="date" class="tripend2" id="tripend2" name="tripend2" min="2023-01-01"
+                          max="2099-12-31">
+                      </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="send2">Trimite</button>
+                  </div>
+                </div>
+              </div>
+        </div>
+        </li>
+        </ul>
+      </div>
+      <!-- End Grid/Pricing tables -->
+    </div>
+    <!-- End About Section -->
+  </div>
+
+  <!-- Portfolio Section -->
+  <div class="w3-padding-64 w3-content" id="photos">
+    <h2 class="w3-text-light-grey">GALERIE</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <!-- Grid for photos -->
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half">
+        <img src="../css/pictures/pozacamera1.jpg" style="width:100%">
+        <img src="../css/pictures/pozacamera2.jpg" style="width:100%">
+        <img src="../css/pictures/pozacamera3.jpg" style="width:100%">
+        <img src="../css/pictures/piscinahotel.jpg" style="width:100%">
+      </div>
+
+      <div class="w3-half">
+        <img src="../css/pictures/baiehotel1l.jpg" style="width:100%">
+        <img src="../css/pictures/baiehotel2.jpg" style="width:100%">
+        <img src="../css/pictures/baiehotel3.jpg" style="width:100%">
+        <img src="../css/pictures/salaconfhotel.jpg" style="width:100%">
+
+      </div>
+      <!-- End photo grid -->
+    </div>
+    <!-- End Portfolio Section -->
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-light-grey">Contactați-ne!</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Brașov, RO</p>
+      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Telefon: +40 789566321</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: bogushotel@gmail.com</p>
+    </div><br>
+    <p>Luați legătura cu noi!</p>
+
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+          <i class="fa fa-paper-plane"></i> Trimiteți-ne un mesaj!
+        </button>
+      </p>
+    </form>
+    <!-- End Contact Section -->
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank"
+        class="w3-hover-text-green">Codetamer333</a></p>
+    <!-- End footer -->
+  </footer>
+
+  <!-- END PAGE CONTENT -->
+  </div>
+
+</body>
+
+</html>
